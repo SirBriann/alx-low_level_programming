@@ -1,6 +1,4 @@
 # include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
 /**
  * main - Program that prints a string to the stderr
  *
