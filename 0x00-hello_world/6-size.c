@@ -1,6 +1,6 @@
 # include <stdio.h>
 /**
- * main - a C program that prints the size of various types on the computer it is compiled and run on
+ * main -Prints the size of various types on the computer
  *
  * Return: Always 0 (sucess)
  */
