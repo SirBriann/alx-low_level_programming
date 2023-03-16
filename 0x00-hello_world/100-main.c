@@ -1,11 +1,11 @@
 #!/bin/bash
-# include <stdio.h>
+# include <studio.h>
 /**
- * main - Write a script that generates the assembly code
+ * main - generates the assembly code (Intel syntax) 
  *
  * Return: Always 0 (success)
  */
 int main(void)
 {
-	retun (0);
+	return (0);
 }
