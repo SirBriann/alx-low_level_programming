@@ -1,21 +1,21 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
-#include <unistd.h>
+
 /**
  * main - Program that assigns a randon number to a variable
  *
- * Return: Always 0 (success)
+ * Return: Always (success)
  */
 int main(void)
 {
-	int n;
-	int LastDgt;
+	int n, LastDgt;
 
-	LastDgt = n % 10;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+	LastDgt = n % 10;
+
 	if (LastDgt > 5)
 	{
 		printf("Last digit of %d is %d and is greater than 5\n", n, LastDgt);
