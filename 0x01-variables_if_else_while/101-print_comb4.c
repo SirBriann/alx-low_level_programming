@@ -7,7 +7,9 @@
  */
 int main(void)
 {
-	int x, y, z;
+	int x;
+	int y;
+	int z;
 
 	for (x = 0; x < 8; x++)
 	{
@@ -19,7 +21,7 @@ int main(void)
 				putchar(y + '0');
 				putchar(z + '0');
 
-				if (x == 7 && y == 9 && z == 10)
+				if (x == 7 && y == 8 && z == 9)
 					continue;
 
 				putchar(',');
