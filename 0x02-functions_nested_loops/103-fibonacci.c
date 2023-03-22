@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - program that finds and prints the sum of the even-valued terms
+ *
+ * Return: Always (success)
+ */
+int main(void)
+{
+	unsigned int exc = 4e6;
+	unsigned int curr = 2;
+	unsigned int prev = 1;
+	unsigned int next;
+	unsigned int total = 0;
+
+	while (curr < exc)
+	{
+		next = prev + curr;
+		prev = curr;
+		curr = next;
+
+		if (curr % 2 == 0)
+		{
+			total += curr;
+		}
+	}
+	printf("%d\n", total);
+	return (0);
+}
