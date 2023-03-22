@@ -9,8 +9,8 @@ int main(void)
 {
 	int count = 3;
 
-	unsigned long int first = 1, second = 2;
-	unsigned long int next = first + second;
+	long int first = 1, second = 2;
+	long int next = first + second;
 
 	printf("%lu, ", first);
 	printf("%lu, ", second);
