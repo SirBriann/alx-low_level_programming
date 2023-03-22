@@ -9,21 +9,21 @@ int main(void)
 {
 	int count = 3;
 
-	int first = 1, second = 2;
-	int next = first + second;
+	unsigned long int first = 1, second = 2;
+	unsigned long int next = first + second;
 
-	printf("%ld, ", first);
-	printf("%ld, ", second);
+	printf("%lu, ", first);
+	printf("%lu, ", second);
 
 	while (count <= 98)
 	{
 		if (count == 98)
 		{
-			printf("%ld\n", next);
+			printf("%lu\n", next);
 		}
 		else
 		{
-			printf("%ld, ", next);
+			printf("%lu, ", next);
 		}
 
 		first = second;
