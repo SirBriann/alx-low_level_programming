@@ -8,22 +8,22 @@
 int main(void)
 {
 	int count = 3;
-	int first = 1;
-	int second = 2;
+
+	int first = 1, second = 2;
 	int next = first + second;
 
-	printf("%d, ", first);
-	printf("%d, ", second);
+	printf("%lu, ", first);
+	printf("%lu, ", second);
 
 	while (count <= 50)
 	{
 		if (count == 50)
 		{
-			printf("%d \n", next);
+			printf("%lu \n", next);
 		}
 		else
 		{
-			printf("%d, ", next);
+			printf("%lu, ", next);
 		}
 
 		first = second;
@@ -32,6 +32,7 @@ int main(void)
 		next = first + second;
 		count++;
 	}
+
 	return (0);
 }
 
