@@ -15,13 +15,13 @@ int main(void)
 
 	while (curr < exc)
 	{
+		next = prev + curr;
+		prev = curr;
+		curr = next;
+
 		if (curr % 2 == 0)
 		{
 			total += curr;
-
-			next = prev + curr;
-			prev = curr;
-			curr = next;
 		}
 	}
 	printf("%d\n", total);
