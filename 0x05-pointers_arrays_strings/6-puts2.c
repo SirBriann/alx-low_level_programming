@@ -4,29 +4,23 @@
 #include "main.h"
 
 /**
- * rev_string - function that prints a string, in reverse
- * @s: Our pointer argument
+ * puts2 - function that prints a string, in reverse
+ * @str: Our pointer argument
  * Return: Always (success)
  */
-void rev_string(char *s)
+void puts2(char *str)
 {
-	char z;
-	int i, x, y;
+	int len, i;
 
-	x = 0;
-	y = 0;
+	len = 0;
 
-	while (s[x] != '\0')
+	while (str[len] != '\0')
 	{
-		x++;
+		len++;
 	}
 
-	y = x - 1;
-
-	for (i = 0; i < x / 2; i++)
+	for (i = 0; i < len; i += 2)
 	{
-		z = s[i];
-		s[i] = s[y];
-		s[y--] = z;
+		_putchar('\n');
 	}
 }
