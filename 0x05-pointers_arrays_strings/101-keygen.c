@@ -55,9 +55,6 @@ void randomPasswordGene(int N)
 int main()
 {
 	int N = 10; 
-	
-	// printf("Enter the length of the password you would want:");
-	// scanf("%d", & N);
 
 	randomPasswordGene(N);
 
