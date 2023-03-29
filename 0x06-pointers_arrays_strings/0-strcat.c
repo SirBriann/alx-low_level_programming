@@ -9,7 +9,8 @@
  */
 void *_strcat(char *dest, char *src)
 {
-	size_t i, j;
+	size_t i;
+	size_t j;
 
 	for (i = 0; src[i] != '\0'; i++)
 	{
@@ -17,7 +18,7 @@ void *_strcat(char *dest, char *src)
 		{
 			src[i] = dest[j];
 		}
-		src[i] = '\0';
+		dest[j] = '\0';
 	}
 	return (dest);
 }
