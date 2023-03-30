@@ -9,17 +9,15 @@
  */
 char *string_toupper(char *str)
 {
-	int i;
+	char *p = str;
 
-	i = 0;
-
-	while (str[i] != '\0')
+	while (*p != '\0')
 	{
-		if (str[i] >= 65 && str[i] <= 90)
+		if (islower(*p))
 		{
-			str[i] = str[i] + 32;
-			i++;
+			*p = toupper(*p);
 		}
+		p++;
 	}
-	return (0);
+	return (str);
 }
