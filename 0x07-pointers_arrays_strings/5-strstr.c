@@ -22,7 +22,7 @@ char *_strstr(char *haystack, char *needle)
 			{
 				break;
 			}
-		       located = 1;	
+		       located = 1;
 		}
 		if (located && !needle[j])
 		{
