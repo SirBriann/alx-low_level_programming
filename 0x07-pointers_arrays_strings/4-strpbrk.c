@@ -27,7 +27,7 @@ char *_strpbrk(char *s, char *accept)
 		}
 		if (flag)
 		{
-			return (char *)(s + i);
+			return ((char *)(s + i));
 		}
 	}
 	return (NULL);
