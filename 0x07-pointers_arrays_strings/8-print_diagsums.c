@@ -9,22 +9,14 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j;
+	int i;
 	int leftD = 0;
 	int rightD = 0;
 
-	for (i = 0; size; i++)
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; size; j++)
-		{
-			if (i == j)
-			{
-				leftD += *(a + i * size + j);
-			}
-			if (i + j == size - 1)
-			{
-				rightD += *(a + i * size + size - j - 1);
-			}
-		}
+		leftD += *(a + i * size + i);
+		rightD += *(a + i * size + size - i - 1);
 	}
+	printf("%d, %d\n", leftD, rightD);
 }
