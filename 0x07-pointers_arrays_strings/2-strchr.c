@@ -12,12 +12,22 @@ char *_strchr(char *s, char c)
 	size_t i;
 	int len = strlen(s);
 
+
 	for (i = 0; len; i++)
 	{
-		if (*s == c)
+		while (*s != c)
 		{
-			return (s);
+			s++;
+			i++;
+		}
+		if (s[i] == c)
+		{
+			return (s + i);
+		}
+		else
+		{
+			return (NULL);
 		}
 	}
-	return (NULL);
+	return (0);
 }
