@@ -9,27 +9,27 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	size_t i, j, flag, count;
+	size_t i, j, flag;
 
-	count = 0;
+	flag = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		flag = 0;
 
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
 			{
-				count++;
+
 				flag = 1;
+				break;
 			}
 		}
-		if (flag == 0)
+		if (flag)
 		{
-			return (NULL);
+			return (char *)(s + i);
 		}
 	}
-	return (s);
+	return (NULL);
 }
 
