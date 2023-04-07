@@ -7,6 +7,7 @@
 /**
  * _sqrt_recursion - function that returns the natural square root of a number
  * @n: Our integer n
+ * @c: Our parameter checker
  * Return: Always (success)
  */
 int checker(int n, int c);
