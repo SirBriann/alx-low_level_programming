@@ -9,6 +9,7 @@
  * @n: Our integer n
  * Return: Always (success)
  */
+int checker(int n, int c);
 int _sqrt_recursion(int n)
 {
 
@@ -21,6 +22,7 @@ int _sqrt_recursion(int n)
 /**
  * checker - function that returns the natural square root of a number
  * @n: Our integer n
+ * @c: Our paremeter checker
  * Return: Always (success)
  */
 int checker(int n, int c)
