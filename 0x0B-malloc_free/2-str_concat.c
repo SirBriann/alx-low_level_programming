@@ -35,7 +35,7 @@ char *str_concat(char *s1, char *s2)
 	strcpy(k, s1);
 	strcat(k, s2);
 
-	ptr = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	ptr = (char *)malloc(sizeof(char) * (strlen(k) + 1));
 
 	if (ptr == NULL)
 	{
@@ -43,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	for (i = 0; i < len1 + len2; i++)
+	for (i = 0; i < strlen(k) + 1; i++)
 	{
 		ptr[i] = k[i];
 	}
