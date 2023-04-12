@@ -20,9 +20,9 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
-		len += strlen(av[i]);
+		len += strlen(av[i]) + 1;
 	}
 
 	news = (char *)malloc(sizeof(char) * (len + 1));
