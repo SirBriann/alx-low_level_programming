@@ -28,16 +28,14 @@ char *argstostr(int ac, char **av)
 	news = (char *)malloc(sizeof(char) * (len + 1));
 	news[0] = '\0';
 
-	for (i = 0; i < ac; i++)
+	strcat(news, av[0]);
+
+	for (i = 1; i < ac; i++)
 	{
-		strcat(news, av[i]);
 		strcat(news, "\n");
+		strcat(news, av[i]);
 	}
-	if (!news)
-	{
-		free(news);
-	}
-	printf("\n");
+	strcat(news, "\n");
 
 	return (news);
 }
