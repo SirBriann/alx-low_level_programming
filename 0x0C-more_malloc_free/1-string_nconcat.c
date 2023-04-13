@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = len2;
 	}
 
-	str = (char *)calloc(n + len1 + 1, sizeof(char));
+	str = (char *)calloc((n + len1 + 1), sizeof(char));
 
 	if (!str)
 	{
