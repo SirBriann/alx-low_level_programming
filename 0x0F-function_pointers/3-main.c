@@ -8,7 +8,7 @@
  * @argv: Our argument vector. Stores our array of strings
  * Return: Always (success)
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2, calc;
 	char *operator;
@@ -22,15 +22,15 @@ int main(int argc, char *argv[])
 	operator = argv[2];
 	num2 = atoi(argv[3]);
 
-	if (strlen(operator) != 1)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	if ((operator[0] == '/' || operator[0] == '%') && num2 == 0)
+	if (get_op_func(op) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
+	}
+	if ((operator == '/' && num2 == 0) || (operator == '/' && num2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
 	}
 
 	calc = get_op_func(operator)(num1, num2);
