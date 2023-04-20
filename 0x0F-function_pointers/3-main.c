@@ -25,12 +25,12 @@ int main(int argc, char *argv[])
 	if (strlen(operator) != 1)
 	{
 		printf("Error\n");
-		exit(99);
+		exit(100);
 	}
 	if ((operator[0] == '/' || operator[0] == '%') && num2 == 0)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 
 	calc = get_op_func(operator)(num1, num2);
