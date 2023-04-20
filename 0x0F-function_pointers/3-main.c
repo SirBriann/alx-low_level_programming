@@ -21,37 +21,18 @@ int main(int argc, char *argv[])
 	operator = argv[2];
 	num2 = atoi(argv[3]);
 
-	switch (*operator)
+	calc = (operator[0] == '+') ? num1 + num2 :
+		(operator[0] == '-') ? num1 - num2 :
+		(operator[0] == '*') ? num1 * num2 :
+		(operator[0] == '/' && num2 != 0) ? num1 / num2 :
+		(operator[0] == '%' && num2 != 0) ? num1 % num2 : -1;
+
+	if (calc == -1)
 	{
-		case '+':
-			calc = op_add(num1, num2);
-			break;
-		case '-':
-			calc = op_sub(num1, num2);
-			break;
-		case '*':
-			calc = op_mul(num1, num2);
-			break;
-		case '/':
-			if (num2 == 0)
-			{
-				printf("Error\n");
-				exit(100);
-			}
-			calc = op_div(num1, num2);
-			break;
-		case '%':
-			if (num2 == 0)
-			{
-				printf("Error\n");
-				exit(100);
-			}
-			calc = op_mod(num1, num2);
-			break;
-		default:
-			printf("Error\n");
-			exit(99);
+		printf("Error\n");
+		return (100);
 	}
+
 	printf("%d\n", calc);
 
 	return (0);
