@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
 	unsigned char *opcodes = (unsigned char *)&main;
 
-	for (i = 0; i < num; i++)
+	for (i = 0; i < num + 3; i++)
 	{
 		printf("%02x ", opcodes[i]);
 	}
