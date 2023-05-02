@@ -3,7 +3,7 @@
 #include <string.h>
 #include "lists.h"
 /**
- * print_listint_len -  A function that prints the number elements
+ * listint_len -  A function that prints the number elements
  * @h: Pointer to the head of a linked list
  * Return: The count
  */
