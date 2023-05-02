@@ -26,7 +26,7 @@ size_t free_listint_safe(listint_t **h)
 		if (current >= next)
 		{
 			printf("-> [%p] %d\n", (void *)next, next->n);
-			free (current);
+			free(current);
 			break;
 		}
 		free(current);
