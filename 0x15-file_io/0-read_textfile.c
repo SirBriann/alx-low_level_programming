@@ -10,8 +10,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fp = NULL;
-	size_t i = 0;
-	int ch;
+	char *buf;
+	ssize_t read;
 
 
 	if (!filename)
@@ -25,19 +25,23 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	ch = fgetc(fp);
-
-	while (ch != EOF && i < letters)
+	buf  = malloc(sizeof(char) * (letters + 1));
+	if (!buf)
 	{
-		if (putchar(ch) == EOF)
-		{
 		fclose(fp);
-		i++;
-
 		return (0);
-		}
 	}
+	read = fread(buf, sizeof(char), letters, fp);
+	if (read < 0 || read < (ssize_t)letters)
+	{
+		free(buf);
+		fclose(fp);
+		return (0);
+	}
+	buf[read] = '\0';
+	printf("%s", buf);
+	free(buf);
 	fclose(fp);
 
-	return (i);
+	return (read);
 }
