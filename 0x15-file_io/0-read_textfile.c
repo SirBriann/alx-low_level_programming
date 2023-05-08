@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	read = fread(buf, sizeof(char), letters, fp);
-	if (read < 0 || read <= (ssize_t)letters)
+	if (read < 0 || read < (ssize_t)letters)
 	{
 		free(buf);
 		fclose(fp);
